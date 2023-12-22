@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hyuk.memopractice.mappers.MemoMapper">
+    <select id="selectAll" resultType="com.hyuk.memopractice.entities.MemoEntity">
+        SELECT `index` AS `index`,
+               `datetime` AS `datetime`,
+               `nickname` AS `nickname`,
+               `text` AS `text`
+        FROM `memo_practice`.`memos`
+        ORDER BY `index` DESC;
+    </select>
+</mapper>
